@@ -1,28 +1,10 @@
 *****************************************************************************
-** ChibiOS/RT port for ARM-Cortex-M3 STM32F103.                            **
+** ChibiOS/RT port for ARM-Cortex-M3 STM32F105RC.                            **
 *****************************************************************************
 
-** TARGET **
-
-The demo runs on an ST_NUCLEO_F103RB board.
-
-** The Demo **
-
-The demo flashes the board LED using a thread, by pressing the button located
-on the board the test procedure is activated with output on the serial port
-SD2 (USART2, mapped on USB virtual COM port).
-
-** Build Procedure **
-
-The demo has been tested by using the free Codesourcery GCC-based toolchain
-and YAGARTO.
-Just modify the TRGT line in the makefile in order to use different GCC ports.
-
-** Notes **
-
-Some files used by the demo are not part of ChibiOS/RT but are copyright of
-ST Microelectronics and are licensed under a different license.
-Also note that not all the files present in the ST library are distributed
-with ChibiOS/RT, you can find the whole library on the ST web site:
-
-                             http://www.st.com
+** Installing this Project **
+To install this project, first download ChibiOS from https://sourceforge.net/projects/chibios/
+Extract the zip file
+enter to the root directory of the ChibiOS Source (i.e. ChibiOS/ChibiOS_16.1.5/)
+Create new folder called 'projects' (dir should be ChibiOS/ChibiOS_16.1.5/projects)
+Clone Project in this folder: git clone https://github.com/bass0324/AUDIO_DAC_STM32F105RC.git
