@@ -197,7 +197,7 @@
  */
 #define VAL_GPIOCCRL            0x33333333      /*  PC7...PC0 */
 #define VAL_GPIOCCRH            0x33333333      /* PC15...PC8 */
-#define VAL_GPIOCODR            0xFFFFFFFF
+#define VAL_GPIOCODR            0xFFFF0000
 
 /*
  * Port D setup.

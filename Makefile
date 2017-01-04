@@ -95,7 +95,7 @@ include $(CHIBIOS)/os/hal/ports/STM32/STM32F1xx/platform.mk
 #include $(CHIBIOS)/os/hal/boards/ST_NUCLEO_F103RB/board.mk
 include $(CHIBIOS)/projects/AUDIO_DAC_STM32F105RC/board/board.mk
 include $(CHIBIOS)/os/hal/osal/rt/osal.mk
-#include $(CHIBIOS)/projects/AUDIO_DAC_STM32F105RC/libraries/TDA7468/tda7468.mk
+include $(CHIBIOS)/projects/AUDIO_DAC_STM32F105RC/libraries/TDA7468/tda7468.mk
 # RTOS files (optional).
 include $(CHIBIOS)/os/rt/rt.mk
 include $(CHIBIOS)/os/rt/ports/ARMCMx/compilers/GCC/mk/port_v7m.mk
@@ -115,6 +115,7 @@ CSRC = $(STARTUPSRC) \
        $(PLATFORMSRC) \
        $(BOARDSRC) \
        $(TESTSRC) \
+       $(TDA7468SRC) \
        main.c
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
