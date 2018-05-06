@@ -1,5 +1,5 @@
 /*
-    ChibiOS - Copyright (C) 2006..2018 Giovanni Di Sirio
+    ChibiOS - Copyright (C) 2006..2015 Giovanni Di Sirio
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -14,8 +14,8 @@
     limitations under the License.
 */
 
-#ifndef MCUCONF_H
-#define MCUCONF_H
+#ifndef _MCUCONF_H_
+#define _MCUCONF_H_
 
 #define STM32F103_MCUCONF
 
@@ -49,27 +49,12 @@
 #define STM32_PPRE1                         STM32_PPRE1_DIV2
 #define STM32_PPRE2                         STM32_PPRE2_DIV2
 #define STM32_ADCPRE                        STM32_ADCPRE_DIV4
-#define STM32_USB_CLOCK_REQUIRED            TRUE
+#define STM32_USB_CLOCK_REQUIRED            FALSE
 #define STM32_USBPRE                        STM32_USBPRE_DIV1
 #define STM32_MCOSEL                        STM32_MCOSEL_NOCLOCK
 #define STM32_RTCSEL                        STM32_RTCSEL_NOCLOCK
 #define STM32_PVD_ENABLE                    FALSE
 #define STM32_PLS                           STM32_PLS_LEV0
-
-/*
- * IRQ system settings.
- */
-#define STM32_IRQ_EXTI0_PRIORITY            6
-#define STM32_IRQ_EXTI1_PRIORITY            6
-#define STM32_IRQ_EXTI2_PRIORITY            6
-#define STM32_IRQ_EXTI3_PRIORITY            6
-#define STM32_IRQ_EXTI4_PRIORITY            6
-#define STM32_IRQ_EXTI5_9_PRIORITY          6
-#define STM32_IRQ_EXTI10_15_PRIORITY        6
-#define STM32_IRQ_EXTI16_PRIORITY           6
-#define STM32_IRQ_EXTI17_PRIORITY           6
-#define STM32_IRQ_EXTI18_PRIORITY           6
-#define STM32_IRQ_EXTI19_PRIORITY           6
 
 /*
  * ADC driver system settings.
@@ -83,6 +68,21 @@
  */
 #define STM32_CAN_USE_CAN1                  FALSE
 #define STM32_CAN_CAN1_IRQ_PRIORITY         11
+
+/*
+ * EXT driver system settings.
+ */
+#define STM32_EXT_EXTI0_IRQ_PRIORITY        6
+#define STM32_EXT_EXTI1_IRQ_PRIORITY        6
+#define STM32_EXT_EXTI2_IRQ_PRIORITY        6
+#define STM32_EXT_EXTI3_IRQ_PRIORITY        6
+#define STM32_EXT_EXTI4_IRQ_PRIORITY        6
+#define STM32_EXT_EXTI5_9_IRQ_PRIORITY      6
+#define STM32_EXT_EXTI10_15_IRQ_PRIORITY    6
+#define STM32_EXT_EXTI16_IRQ_PRIORITY       6
+#define STM32_EXT_EXTI17_IRQ_PRIORITY       6
+#define STM32_EXT_EXTI18_IRQ_PRIORITY       6
+#define STM32_EXT_EXTI19_IRQ_PRIORITY       6
 
 /*
  * GPT driver system settings.
@@ -155,7 +155,7 @@
  */
 #define STM32_SERIAL_USE_USART1             FALSE
 #define STM32_SERIAL_USE_USART2             FALSE
-#define STM32_SERIAL_USE_USART3             FALSE
+#define STM32_SERIAL_USE_USART3             TRUE
 #define STM32_SERIAL_USE_UART4              FALSE
 #define STM32_SERIAL_USE_UART5              FALSE
 #define STM32_SERIAL_USART1_PRIORITY        12
@@ -187,7 +187,7 @@
 /*
  * UART driver system settings.
  */
-#define STM32_UART_USE_USART1               FALSE
+#define STM32_UART_USE_USART1               TRUE
 #define STM32_UART_USE_USART2               FALSE
 #define STM32_UART_USE_USART3               FALSE
 #define STM32_UART_USART1_IRQ_PRIORITY      12
@@ -211,4 +211,4 @@
  */
 #define STM32_WDG_USE_IWDG                  FALSE
 
-#endif /* MCUCONF_H */
+#endif /* _MCUCONF_H_ */

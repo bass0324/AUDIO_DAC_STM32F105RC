@@ -16,7 +16,7 @@
 
 #include "ch.h"
 #include "hal.h"
-#include "test.h"
+//#include "test.h"
 #include "tda7468.h"
 
 /*
@@ -131,7 +131,7 @@ int main(void) {
   /*
    * Activates the serial driver 2 using the driver default configuration.
    */
-  sdStart(&SD3, NULL);
+//  sdStart(&SD3, NULL);
 
   /*
    * Activate the I2C Driver
