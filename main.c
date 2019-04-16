@@ -60,7 +60,7 @@ static InputSelectTypeDef inputSelect = {(uint8_t)TDA7468_INPUT_SELECT_INPUT1,
                                       (uint8_t)TDA7468_INPUT_MUTE_OFF,
                                       (uint8_t)TDA7468_MIC_GAIN_0DB,
                                       (uint8_t)TDA7468_MIC_OFF};
-static uint8_t inputGain = TDA7468_INPUT_GAIN_14DB;
+static uint8_t inputGain = TDA7468_INPUT_GAIN_0DB;
 static SurroundTypeDef surround = {      (uint8_t)TDA7468_SURROUND_MODE_OFF,
                                       (uint8_t)TDA7468_SURROUND_GAIN_0DB,
                                       (uint8_t)TDA7468_SURROUND_MIX_ZERO,
