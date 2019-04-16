@@ -56,7 +56,7 @@ static THD_FUNCTION(Thread1, arg) {
 }
 
 int InitTda7468(I2CDriver *i2cp) {
-static InputSelectTypeDef inputSelect = {(uint8_t)TDA7468_INPUT_SELECT_INPUT1,
+static InputSelectTypeDef inputSelect = {(uint8_t)TDA7468_INPUT_SELECT_INPUT4,
                                       (uint8_t)TDA7468_INPUT_MUTE_OFF,
                                       (uint8_t)TDA7468_MIC_GAIN_0DB,
                                       (uint8_t)TDA7468_MIC_OFF};
