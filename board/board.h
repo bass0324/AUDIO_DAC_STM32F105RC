@@ -30,23 +30,14 @@
 /*
  * Board frequencies.
  */
-#define STM32_LSECLK            0
 
-#if defined(NUCLEO_EXTERNAL_OSCILLATOR)
-#define STM32_HSECLK            8000000
-#define STM32_HSE_BYPASS
-
-#elif defined(NUCLEO_HSE_CRYSTAL)
-#define STM32_HSECLK            8000000
-
-#else
-#define STM32_HSECLK            0
-#endif
+#define STM32_LSECLK            32768
+#define STM32_HSECLK            25000000
 
 /*
  * MCU type, supported types are defined in ./os/hal/platforms/hal_lld.h.
  */
-#define STM32F103xB
+#define STM32F105xC
 
 /*
  * IO pins assignments.
