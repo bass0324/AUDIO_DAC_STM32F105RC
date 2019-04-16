@@ -150,6 +150,8 @@ int main(void) {
 
   InitTda7468(&I2CD1);
 
+  setInputLed(inputSelect.InputSelect);
+
   /*
    * Creates the blinker thread.
    */
