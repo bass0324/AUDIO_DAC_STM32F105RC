@@ -128,10 +128,20 @@ int main(void) {
   halInit();
   chSysInit();
 
+/*  SerialConfig sd3cfg = {
+	  115200,
+	  USART_CR1_8BIT_WORD | USART_CR1_PARITY_SET | USART_CR1_EVEN_PARITY,
+	  USART_CR2_STOP1_BITS | USART_CR2_LINEN,
+	  0
+  };*/
   /*
    * Activates the serial driver 2 using the driver default configuration.
    */
-//  sdStart(&SD3, NULL);
+  sdStart(&SD3, NULL);
+//  palSetPadMode(GPIOB, 10, PAL_MODE_ALTERNATE(7));
+//  palSetPadMode(GPIOB, 11, PAL_MODE_ALTERNATE(7));
+
+  sdWrite(&SD3, (uint8_t*)"Serial Output Started\r\n", 23);
 
   /*
    * Activate the I2C Driver
